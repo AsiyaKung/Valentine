@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คำถามวันวาเลนไทน์</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #ffe7ff;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+    }
+    button {
+      padding: 20px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+    form {
+        background: #ffffff; 
+        padding: 20px; 
+        border-radius: 10px; 
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #yesButton {
+      font-size: 20px;
+      border-radius: 15px;
+      border: #ffe7ff;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #noButton {
+      font-size: 20px;
+      border-radius: 15px;
+      border: #ffe7ff;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    #message {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+     <div class="container">
+        <form action="">
+            <div id="message">รักเราไหม ?🥺</div>
+            <img src="https://i.gifer.com/Pak.gif" alt="" width="100" ><br>
+        </form>
+        <button id="yesButton" onclick="goToNextPage('yes')">รักมาก 😍</button>
+        <button id="noButton" onclick="increaseSize()">ไม่รักอ่ะ ❌</button>
+      </div>
+      
+      <script>
+        let yesclick = 0;
+        let noCount = 0;
+      
+        function increaseSize() {
+          noCount++;
+          if (noCount === 10) {
+            alert("ไม่เหนื่อยหรอ")
+        }
+        if (noCount === 11) {
+            alert("พอยังอ่ะ")
+        }
+        if (noCount === 12) {
+            alert("พอเหอะ")
+        }
+        if (noCount === 13) {
+            alert("เหนื่อยแล้ว พอหน่อย")
+        }
+        if (noCount === 14) {
+            alert("ถ้าจะไม่รักขนาดนั้นไม่ห้ามก้ได้พี่")
+        }
+          const noButton = document.getElementById("noButton");
+          yesButton.style.fontSize = `${20 + noCount * 50}px`;
+          noButton.style.fontSize = `${20 - noCount * 5}px`;
+
+        }
+      
+        function goToNextPage(answer) {
+          if (answer === 'yes') {
+            alert("32 กุมภา เจอกัน อิอิ 💖")
+          }
+
+          const yesButton = document.getElementById("yesButton");
+          const noButton = document.getElementById("noButton");
+          
+          yesButton.style.fontSize = "20px";
+          noButton.style.fontSize = "20px";
+          
+          noCount = 0; // Reset count for the 'no' button
+        }
+      </script>       
+
+</body>
+</html>
